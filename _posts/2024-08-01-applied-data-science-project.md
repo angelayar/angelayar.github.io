@@ -7,10 +7,10 @@ categories: ITD214
 ## Project Background
 Provide an overview of your team's project business goals and objectives and state the objective that you are working on. 
 
-### Background
+#### Background
 
 
-### Business Goal
+#### Business Goal
 
 
 ### Approach
