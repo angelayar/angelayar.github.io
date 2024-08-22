@@ -17,7 +17,7 @@ This project aims to leverage sentiment analysis to gain deeper insights into cu
 The project will use the Sephora Beauty Products dataset obtained from Kaggle, focusing on analyzing reviews and ratings to extract sentiment information. Key tasks include:
 
 - Data Preprocessing: Clean and prepare the dataset for analysis, handling missing values, text normalization, and feature extraction.
-- Sentiment Analysis: Apply natural language processing (NLP) techniques to determine the sentiment behind reviews, categorizing them into positive, neutral, or negative sentiments.
+- Sentiment Analysis: Apply natural language processing (NLP) techniques to determine the sentiment behind reviews, categorizing them into High (positive), Medium (neutral), or Low (negative) sentiments.
 - Product Evaluation: Analyze sentiment trends to evaluate product performance and customer preferences.
 - Recommendation System Development: Implement and refine a recommendation system that utilizes sentiment data to enhance product suggestions.
 
