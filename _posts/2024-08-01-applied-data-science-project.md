@@ -146,22 +146,49 @@ Preview of the cleaned word cloud.
 ### Modelling
 Three of the five models were chosen for sentiment level prediction and modelling. These models were accessed based on their strengths and weaknesses. Additionally, computational resources and constraints were among the factors considered.  The chosen models are Multinomial Logistic Regression (MLR), Random Forest (RF) and Naïve Bayes (NB). 
 
----
-Types of Model: Multinomial Logistic Regression (MLR)
-Strengths:
-•	Handle multiple categories (>2 categories).
-•	Probabilistic Interpretation
-•	No assumptions of Linearity in the Dependent variable
-•	Flexibility in accommodating a range of relationships.
-•	Ease of interpretation in understanding the impact of predictors on different outcomes. 
+![image](https://github.com/user-attachments/assets/55fe2b44-2629-4ac7-b861-9dc13b8085e3)
 
-Weaknesses:
-•	Assumed categories are mutually exclusive or independent. 
-•	Complexity with a large number of categories.
-•	Overfitting risk with a large number of predictors and categories. 
-•	Requires large sample size.
-•	Multicollinearity among predictor variables can affect stability and interpretations. 
----
+Before constructing the model, we divided the dataset into three parts: 70% for training, 20% for testing, and 10% for validation. The training data is used to develop the model, the validation data is employed to fine-tune the model’s hyperparameters, and the testing data is utilized to assess the model's final performance after training and tuning. 
+Hyperparameter tuning will be performed using random search, which is more efficient and cost-effective in high-dimensional spaces. It offers better coverage of the hyperparameter space, enhancing the likelihood of identifying better performing hyperparameters.
+Due to limitations in computational resources and challenges faced during model tuning, the parameter adjustments were meticulously planned with three separate tuning runs. The goal was to detect even the slightest trends or changes in performance, as any small variation could indicate a significant difference.
+
+#### Mutlinomial Logistic Regression 
+The results obtained after training the model shows an overall accuracy score of 75%. Strong precision (> 0.90) in predicting the ‘low’ and ‘high’ sentiment levels. However, it struggles to predict the ‘medium’ class with a precision of just 0.59. 
+
+![image](https://github.com/user-attachments/assets/138d7c28-a6eb-42e5-a50e-c1d3b5555b40)
+
+We adopted random search in hyperparameter tuning. By progressively increasing the regularization level in sequences of 10, 30 and 50, respectively, the models showed improvement in model performance. This is represented by the table below.
+
+![image](https://github.com/user-attachments/assets/3997010b-0528-490b-809e-1a1d392779ea)
+
+If this model is run on a GPU with a regularization range set between 100 and 500, it is likely to achieve even better accuracy and precision. However, we may find that the precision scores for both the 'low' and 'high' sentiment levels stabilize between 0.97 and 0.98, even with further increases in regularization. This suggests that beyond a certain point, additional regularization may have diminishing returns and may not significantly improve the precision for these classes.
+
+![image](https://github.com/user-attachments/assets/c32e2ae2-2fc5-4c61-b768-24927143f366)
+
+
+#### Random Forest
+The results from training the Random Forest model indicate an overall accuracy of 82%. The model achieves a perfect precision of 1.00 for predicting both 'low' and 'high' sentiment levels. However, it faces challenges in predicting the 'medium' class, with a precision of 0.65, the lowest among the models. 
+
+![image](https://github.com/user-attachments/assets/61c539d3-2a2d-4cce-8c42-5d283ecedf59)
+
+Similarly, we utilized random search for hyperparameter tuning. Notably, increasing the number of trees (n-estimators) initially improved accuracy. However, when the number of trees was varied between 1 and 100, we observed a slight decrease in overall accuracy and precision. This may suggest that adding more trees could lead to diminishing returns or potential overfitting after a certain point, where the model starts to capture noise rather than underlying patterns.
+
+![image](https://github.com/user-attachments/assets/fb2a91e6-0d2a-449c-af51-491e3a8fa240)
+
+
+#### Naïve Bayes
+The results from training the Naïve Bayes model show an overall accuracy of 71%. The model attains strong precision, exceeding 0.80, for predicting both low and high sentiment levels. However, it encounters difficulties with the 'medium' class, achieving a precision of 0.56. While this precision is the lowest among the models tested, it still indicates that the model struggles to predict 'medium' sentiment accurately. It suggests that further adjustments or additional data might be needed to enhance its performance in this area. 
+
+![image](https://github.com/user-attachments/assets/0a325b1b-657e-4957-bcb0-dff30c4c535c)
+
+Increasing the number of iterations does not affect class precision, although accuracy slightly improves. This is evident from the stable precision values despite the increase in iterations. Since Naïve Bayes depends on probabilistic calculations based on feature frequencies and class labels, raising the number of iterations to 300 does not influence precision. The model's performance is primarily driven by the underlying probabilistic relationships and feature distributions, rather than the number of iterations
+
+![image](https://github.com/user-attachments/assets/9af0d6f1-1fa8-4ff6-9f68-18ab06257268)
+
+
+
+
+
 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
