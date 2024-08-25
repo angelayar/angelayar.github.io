@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/d251beed-53ec-4f3c-a1bb-311019878268)---
 layout: post
 author: Angela Yar
 title: "Enhancing Product Recommendations through Sentiment Analysis in Sephora's Beauty Products Dataset"
@@ -8,8 +8,6 @@ categories: ITD214
 Sephora, a leader in the global beauty retail industry, has been at the forefront of luxury and expertise since its establishment in 1969 in Paris. Known for its diverse product range—including makeup, skincare, hair care, and beauty tools—Sephora prioritizes personalized service and expert advice. In an ever-evolving market marked by intense competition and saturation, Sephora strives to differentiate itself through innovation and customer-centric approaches. Leveraging digital tools to provide tailored recommendations is a crucial strategy for maintaining its competitive edge.
 
 ## Background
-
-
 #### Business Goal
 This project aims to leverage sentiment analysis to gain deeper insights into customer satisfaction with Sephora’s products. By analyzing customer reviews and ratings, the project seeks to enhance Product Recommendations: Develop a recommendation system that uses sentiment insights to suggest products more effectively, fostering cross-selling opportunities and boosting overall sales and customer satisfaction.
 
@@ -78,11 +76,31 @@ There were missing values identified in columns of “is_recommended”, “help
 
 ![image](https://github.com/user-attachments/assets/8716e3a6-1555-4361-b602-4b77dfb7c2b5)
 
+It is impossible to impute text reviews, so we will put a placeholder text to replace missing reviews with “No reviews provided”, as it is easier to implement and ensures that all records have some form of text. Next, we calculate the missing values in the “is_recommended” and “helpfulness” columns using the mode by ratings. 
 
 
+Step 7: It is impossible to impute text reviews, so we will put a placeholder text to replace missing reviews with “No reviews provided”, as it is easier to implement and ensures that all records have some form of text. Next, we calculate the missing values in the “is_recommended” and “helpfulness” columns using the mode by ratings. 
 
+Step 8: We will consider dropping duplicates by keeping the first occurrence.  Instead of removing 1021 rows, the total number of rows removed is 568. 
 
-Step 7: 
+![image](https://github.com/user-attachments/assets/0c499f03-3a57-409c-a7e4-dd9d9de53ec2)
+
+Step 9: We will emphasize on acne products using specific keyword searches.
+
+![image](https://github.com/user-attachments/assets/9d9553dc-b887-4e11-a93c-08d3a496b9df)
+
+Step 10: Construct a new column to contain “high”, “medium”, and “low” sentiment levels, where ratings define these sentiment levels. If the rating is between 1 – and 2, it is categorised as low sentiment; ratings of 3 will be medium sentiment, and ratings of 4 – 5 will be high sentiment level. In a given situation, if the sentiment level is high, it equally means high ratings. 
+
+![image](https://github.com/user-attachments/assets/84e5f77b-4ada-4dfa-8da7-4edd220ae0cd)
+
+Step 11: We saw that the class balance on ratings and sentiment level revealed that ratings 5 is the majority class. Applying hybrid class balancing using SMOTE on the minority and under-sampling the majority class to generate a more balanced dataset. We have cleaned and balanced our dataset, which is now called the “balanced_sentiment_data”. We will make use of this data frame throughout the text preprocessing. 
+
+![image](https://github.com/user-attachments/assets/fa99b010-2483-4648-b14d-c9629268818f)
+![image](https://github.com/user-attachments/assets/72139deb-aa60-4f0f-bf2d-ca035c523870)
+![image](https://github.com/user-attachments/assets/e2e3f693-1734-4219-87db-be69fbecd7af)
+
+![image](https://github.com/user-attachments/assets/9a135a54-2a67-4189-a0f2-aa4dbc8cb174)
+
 
 
 
