@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d251beed-53ec-4f3c-a1bb-311019878268)---
+---
 layout: post
 author: Angela Yar
 title: "Enhancing Product Recommendations through Sentiment Analysis in Sephora's Beauty Products Dataset"
