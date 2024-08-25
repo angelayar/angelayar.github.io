@@ -41,7 +41,7 @@ Step 2: In the data exploration phase, we combined all reviews into one data fra
 
 Step 3: Exploring the dimensions of the Products and Reviews data frame shows that there are 8494 rows and 27 columns in the Product data frame, with the number of unique values in each feature. Similarly, we performed the same dimension checks on the Reviews data frame, which contains more than 975,000 rows and 19 columns. 
 
-![image](https://github.com/user-attachments/assets/595a5ac2-0539-47fc-8daf-f81f4e87ffa0)
+![image](https://github.com/user-attachments/assets/163d83bb-b929-4fc1-8475-09cc134bbb9e)
 ![image](https://github.com/user-attachments/assets/8217787d-ecf8-4876-b0d0-02ed47e23808)
 
 Step 4: Exploring the Descriptive statistics shows that the dataset encompasses 8,494 products, showcasing a diverse range of attributes. On average, each product has about 29,179.57 loves count, suggesting a high variance in the number of loves. Ratings are scaled between 1 to 5, with a mean of 4.19, indicating that the products generally receive favourable ratings. A mean price of $51.66 and a maximum of $1,900 indicate a significant price variation and a broad spectrum of product values. 
@@ -146,7 +146,7 @@ Preview of the cleaned word cloud.
 ### Modelling
 Three of the five models were chosen for sentiment level prediction and modelling. These models were accessed based on their strengths and weaknesses. Additionally, computational resources and constraints were among the factors considered.  The chosen models are Multinomial Logistic Regression (MLR), Random Forest (RF) and Naïve Bayes (NB). 
 
-![image](https://github.com/user-attachments/assets/55fe2b44-2629-4ac7-b861-9dc13b8085e3)
+![image](https://github.com/user-attachments/assets/20f398ed-d53e-49bc-8882-a74e226107f2)
 
 Before constructing the model, we divided the dataset into three parts: 70% for training, 20% for testing, and 10% for validation. The training data is used to develop the model, the validation data is employed to fine-tune the model’s hyperparameters, and the testing data is utilized to assess the model's final performance after training and tuning. 
 Hyperparameter tuning will be performed using random search, which is more efficient and cost-effective in high-dimensional spaces. It offers better coverage of the hyperparameter space, enhancing the likelihood of identifying better performing hyperparameters.
