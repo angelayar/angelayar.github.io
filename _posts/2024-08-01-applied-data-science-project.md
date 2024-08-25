@@ -44,10 +44,10 @@ Step 3: Exploring the dimensions of the Products and Reviews data frame shows th
 
 Step 4: Exploring the Descriptive statistics shows that the dataset encompasses 8,494 products, showcasing a diverse range of attributes. On average, each product has about 29,179.57 loves count, suggesting a high variance in the number of loves. Ratings are scaled between 1 to 5, with a mean of 4.19, indicating that the products generally receive favourable ratings. A mean price of $51.66 and a maximum of $1,900 indicate a significant price variation and a broad spectrum of product values. 
 
-##### Products Data Frame
+Products Data Frame
 ![image](https://github.com/user-attachments/assets/c4982f4f-caea-4a4f-8d9b-6a082a898a81)
 
-##### Reviews Data Frame
+Reviews Data Frame
 ![image](https://github.com/user-attachments/assets/6012d0d9-ca3e-440d-839d-8532239f4348)
 
 The review data frame features over 975,000 entries related to product feedback. The average rating is 4.29 out of 5, and approximately 83.7% of reviews are marked as recommended. Key highlights include a substantial range in feedback count, with the maximum total feedback reaching 5,464, while the average feedback count is around 4.09. Additionally, the mean price of the products is about $48.43, ranging with minimum at $3.00 and maximum $1,900, indicating a diverse pricing spectrum. 
@@ -148,10 +148,11 @@ Three of the five models were chosen for sentiment level prediction and modellin
 ![image](https://github.com/user-attachments/assets/20f398ed-d53e-49bc-8882-a74e226107f2)
 
 Before constructing the model, we divided the dataset into three parts: 70% for training, 20% for testing, and 10% for validation. The training data is used to develop the model, the validation data is employed to fine-tune the model’s hyperparameters, and the testing data is utilized to assess the model's final performance after training and tuning. 
+
 Hyperparameter tuning will be performed using random search, which is more efficient and cost-effective in high-dimensional spaces. It offers better coverage of the hyperparameter space, enhancing the likelihood of identifying better performing hyperparameters.
 Due to limitations in computational resources and challenges faced during model tuning, the parameter adjustments were meticulously planned with three separate tuning runs. The goal was to detect even the slightest trends or changes in performance, as any small variation could indicate a significant difference.
 
-#### Mutlinomial Logistic Regression 
+### Mutlinomial Logistic Regression 
 The results obtained after training the model shows an overall accuracy score of 75%. Strong precision (> 0.90) in predicting the ‘low’ and ‘high’ sentiment levels. However, it struggles to predict the ‘medium’ class with a precision of just 0.59. 
 
 ![image](https://github.com/user-attachments/assets/138d7c28-a6eb-42e5-a50e-c1d3b5555b40)
@@ -164,8 +165,7 @@ If this model is run on a GPU with a regularization range set between 100 and 50
 
 ![image](https://github.com/user-attachments/assets/c32e2ae2-2fc5-4c61-b768-24927143f366)
 
-
-#### Random Forest
+### Random Forest
 The results from training the Random Forest model indicate an overall accuracy of 82%. The model achieves a perfect precision of 1.00 for predicting both 'low' and 'high' sentiment levels. However, it faces challenges in predicting the 'medium' class, with a precision of 0.65, the lowest among the models. 
 
 ![image](https://github.com/user-attachments/assets/61c539d3-2a2d-4cce-8c42-5d283ecedf59)
@@ -175,7 +175,7 @@ Similarly, we utilized random search for hyperparameter tuning. Notably, increas
 ![image](https://github.com/user-attachments/assets/fb2a91e6-0d2a-449c-af51-491e3a8fa240)
 
 
-#### Naïve Bayes
+### Naïve Bayes
 The results from training the Naïve Bayes model show an overall accuracy of 71%. The model attains strong precision, exceeding 0.80, for predicting both low and high sentiment levels. However, it encounters difficulties with the 'medium' class, achieving a precision of 0.56. While this precision is the lowest among the models tested, it still indicates that the model struggles to predict 'medium' sentiment accurately. It suggests that further adjustments or additional data might be needed to enhance its performance in this area. 
 
 ![image](https://github.com/user-attachments/assets/0a325b1b-657e-4957-bcb0-dff30c4c535c)
