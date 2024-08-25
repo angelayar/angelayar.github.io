@@ -95,12 +95,35 @@ Step 10: Construct a new column to contain “high”, “medium”, and “low�
 
 Step 11: We saw that the class balance on ratings and sentiment level revealed that ratings 5 is the majority class. Applying hybrid class balancing using SMOTE on the minority and under-sampling the majority class to generate a more balanced dataset. We have cleaned and balanced our dataset, which is now called the “balanced_sentiment_data”. We will make use of this data frame throughout the text preprocessing. 
 
-![image](https://github.com/user-attachments/assets/fa99b010-2483-4648-b14d-c9629268818f)
-![image](https://github.com/user-attachments/assets/72139deb-aa60-4f0f-bf2d-ca035c523870)
-![image](https://github.com/user-attachments/assets/e2e3f693-1734-4219-87db-be69fbecd7af)
+![image](https://github.com/user-attachments/assets/c4a72614-59c3-4df4-a624-2bcef9b6b451)
 
 ![image](https://github.com/user-attachments/assets/9a135a54-2a67-4189-a0f2-aa4dbc8cb174)
 
+#### Data Preprocessing
+
+![image](https://github.com/user-attachments/assets/02472682-11bb-4c44-9a6c-f09a7d0b98aa)
+
+Step 12: Before we begin with data preprocessing, we generated a visualization in the form of a word cloud and a frequency distribution chart. This allowed us to examine the most frequently occurring words and special characters. From the snapshot, we can see common words like “I”, “It”, “the”, “this”, “and”, “for”, and so on appear the most frequently. 
+
+![image](https://github.com/user-attachments/assets/50326da4-f472-4eff-9c33-71616d20dc2d)
+![image](https://github.com/user-attachments/assets/cab88b7e-c033-4f75-8693-f150cdb8cd32)
+
+Firstly, stopwords do not carry important meaning or semantic information. Hence, removing it helps reduce the volume of text data and ensures relevancy and accuracy in downstream tasks. Stop word removal was applied to the following. 
+•	URLS
+•	Mentions (@) and hashtags (#)
+•	Numbers and other special characters
+•	Lowercase
+•	Stopwords
+
+![image](https://github.com/user-attachments/assets/95ca4c06-00d8-48fa-accd-f4954a898537)
+
+Secondly, we progress to perform tokenization by dividing the text into individual units or tokens, making it easier to analyse and process the text for text analysis and machine learning. Thirdly, as accuracy is the key to our use case, we apply lemmatization instead of stemming, as this ensures the words are reduced to their proper base forms while preserving meaning. Fourthly, applying feature engineering we encode the sentiment levels to convert categorical sentiment levels (such as ‘high’, ‘medium’, and ‘low’) into numerical values which is necessary for machine learning algorithms. Having numerical sentiment values simplifies data handling and model interpretation. 
+
+![image](https://github.com/user-attachments/assets/9be490d3-961e-4b48-80b5-1e142f556c60)
+
+Finally, we transform text data into numerical features using TF-IDF capturing the importance of words within a document relative to a corpus collection. We begin by initialising the TF-IDF Vectorizer by ignoring common English stop words and limiting the number of terms to 10,000, which helps manage the dimensionality of the data. 
+
+![image](https://github.com/user-attachments/assets/500295a9-ca74-4514-ab84-37868b8f1b08)
 
 
 
