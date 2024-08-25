@@ -219,19 +219,19 @@ From the enhanced product recommendation system, the target customers were indee
 
 Both ratings and sentiments influence customer’s purchasing decisions. However, there are several factors to note. 
 
-##### (i)	Customer prioritising functional attributes of the products over emotional sentiment
+### (i)	Customer prioritising functional attributes of the products over emotional sentiment
 The focus is on the tangible and practical aspects of the product that fulfil specific needs or solve problems rather than the emotional or psychological appeal. Functional attributes of skin care products focus on tangible aspects like ingredient efficacy, compatibility with skin types, texture, packaging, and safety. Prioritizing these attributes helps ensure that the product performs effectively and meets the user's specific needs, ultimately leading to better outcomes and satisfaction.
 
-##### (ii)	Price can be a decisive factor
+### (ii)	Price can be a decisive factor
 Price is a major factor in purchasing decisions as it affects affordability, perceived value, and overall satisfaction. Consumers balance prices against their budget, perceived quality, and the value they expect to receive. Retailers and brands must consider these factors and strategically price their products to align with consumer expectations and market conditions. Understanding how price impacts decision-making helps businesses better position their products and develop effective pricing strategies to attract and retain customers
 
-##### (iii)	High market saturation dilutes sentiments
+### (iii)	High market saturation dilutes sentiments
 High market saturation can dilute emotional sentiments by increasing competition, overwhelming consumers with choices, and leading to price-focused decisions. In such an environment, brands must adopt strategies that differentiate them from the competition, focus on unique value propositions, and engage with customers deeper to maintain emotional connections and stand out in the market.
 
-##### (iv)	Sentiments are subjective
+### (iv)	Sentiments are subjective
 Sentiment is inherently subjective because it reflects individual emotions, perspectives, and personal experiences. This subjectivity influences how people perceive and react to products, brands, and marketing efforts. Recognising the subjective nature of sentiment is crucial for accurately interpreting feedback, tailoring marketing strategies, and understanding diverse customer perspectives. By acknowledging and addressing this subjectivity, businesses can better engage with their audience and create more effective and personalised interactions.
 
-##### (v)	Other external factors
+### (v)	Other external factors
 External factors such as economic conditions and social trends are crucial in shaping purchasing decisions. Economic factors like income levels, inflation, and employment rates influence consumers' budgets and spending behaviours. Social trends, including cultural shifts, technological advances, and social media influence, impact consumer preferences and demand. By understanding and adapting to these external factors, businesses can better align their strategies with consumer needs and market conditions, ultimately enhancing their ability to attract and retain customers.
 
 
