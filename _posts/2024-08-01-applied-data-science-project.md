@@ -59,11 +59,30 @@ The review data frame features over 975,000 entries related to product feedback.
 Step 5: Analysing the correlation in Product data frame revealed strong positive (>0.95) correlation between price_usd, value_price, and sale_price, indicating that higher prices tend to align closely with higher value and sales prices. Loves_cont has a moderate positive correlation with a review (0.68), suggesting that products with more reviews generally receive more “love” or positive feedback. Additionally, child_max_price and child_min_price show a moderate correlation (0.68), reflecting that products with higher maximum child prices also tend to have higher minimum child prices. 
 
 ![image](https://github.com/user-attachments/assets/2e393928-57f3-4d38-94f9-436a1177e29e)
+Products Correlation Matrix
 
 Correlation analysis of the Reviews data frame shows ratings has a strong positive correlation (0.85) with is_recommended, indicating that higher-rated products are more likely to be recommended by users. There is a very high correlation between total_feedback_count and total_pos_feedback_count (0.98), suggesting that products with more total feedback tend to receive a proportional amount of positive feedback. The total_neg_feedback_count shows a moderate positive correlation with total_feedback_count (0.65), implying that as the overall number of feedback increases, the number of negative feedbacks also tends to rise. 
 
 ![image](https://github.com/user-attachments/assets/a9c16928-57b6-4c43-81ce-e1b78a861c98)
+Reviews Correlation Matrix
 
+Step 6: We identified several missing values across the Products and Reviews data frames. However, not all columns are required or relevant to our business objective and analysis. Therefore, we applied feature selection or dimensionality reduction before addressing the missing values through imputation. 
+
+![image](https://github.com/user-attachments/assets/5d76c5e4-5505-4e3d-ba54-c7dd34442ef1)
+
+With fewer features, it reduces complexity for a more efficient imputation process. It also improves imputation accuracy with more relevant features and less noise. 
+
+Merging the columns using “product_id” as the primary key to combine the ‘review_title’ and ‘review_text’ into one column called “merged_reviews” while retaining the source columns. The combined data frame is now called “product_reviews”; it gives the shape output of 975,094 rows and 8 columns that match the number of rows from the combined_reviews data frame.
+
+There were missing values identified in columns of “is_recommended”, “helpfulness”, and “merged_reviews”. 
+
+![image](https://github.com/user-attachments/assets/8716e3a6-1555-4361-b602-4b77dfb7c2b5)
+
+
+
+
+
+Step 7: 
 
 
 
