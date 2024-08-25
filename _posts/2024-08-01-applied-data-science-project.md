@@ -208,38 +208,59 @@ For example, customers 22358420165 will be recommended similar products with a h
 ## Recommendation and Analysis
 Some suggested recommendations to improve the model include the following:
 
-•	Adopt class weights in the random forest as ‘balanced’ to emphasize the importance of the ‘medium’ class. This addresses class imbalance, improves model sensitivity and reduces misclassification and bias. 
- 
-•	Apply feature engineering to explore new features or transform existing ones to capture class differences better. 
+- Adopt class weights in the random forest as ‘balanced’ to emphasize the importance of the ‘medium’ class. This addresses class imbalance, improves model sensitivity and reduces misclassification and bias.
 
-•	Review data for labelling errors or inconsistencies resulting in data quality or label noise caused by inconsistency in the ‘medium’ class instances.
+- Apply feature engineering to explore new features or transform existing ones to capture class differences better. 
 
-•	Apply ensemble methods such as stacking ensemble to combine predictions of different models. 
+- Review data for labelling errors or inconsistencies resulting in data quality or label noise caused by inconsistency in the ‘medium’ class instances.
+
+- Apply ensemble methods such as stacking ensemble to combine predictions of different models. 
 
 From the enhanced product recommendation system, the target customers were indeed recommended with a list of top acne products based on the sentiment scores of products rated highly by other customers similar to the target customer. 
 
 Both ratings and sentiments influence customer’s purchasing decisions. However, there are several factors to note. 
 
-(i)	#### Customer prioritising functional attributes of the products over emotional sentiment
+##### (i)	Customer prioritising functional attributes of the products over emotional sentiment
 The focus is on the tangible and practical aspects of the product that fulfil specific needs or solve problems rather than the emotional or psychological appeal. Functional attributes of skin care products focus on tangible aspects like ingredient efficacy, compatibility with skin types, texture, packaging, and safety. Prioritizing these attributes helps ensure that the product performs effectively and meets the user's specific needs, ultimately leading to better outcomes and satisfaction.
 
-(ii)	Price can be a decisive factor
+##### (ii)	Price can be a decisive factor
 Price is a major factor in purchasing decisions as it affects affordability, perceived value, and overall satisfaction. Consumers balance prices against their budget, perceived quality, and the value they expect to receive. Retailers and brands must consider these factors and strategically price their products to align with consumer expectations and market conditions. Understanding how price impacts decision-making helps businesses better position their products and develop effective pricing strategies to attract and retain customers
 
-(iii)	High market saturation dilutes sentiments
+##### (iii)	High market saturation dilutes sentiments
 High market saturation can dilute emotional sentiments by increasing competition, overwhelming consumers with choices, and leading to price-focused decisions. In such an environment, brands must adopt strategies that differentiate them from the competition, focus on unique value propositions, and engage with customers deeper to maintain emotional connections and stand out in the market.
 
-(iv)	Sentiments are subjective
+##### (iv)	Sentiments are subjective
 Sentiment is inherently subjective because it reflects individual emotions, perspectives, and personal experiences. This subjectivity influences how people perceive and react to products, brands, and marketing efforts. Recognising the subjective nature of sentiment is crucial for accurately interpreting feedback, tailoring marketing strategies, and understanding diverse customer perspectives. By acknowledging and addressing this subjectivity, businesses can better engage with their audience and create more effective and personalised interactions.
 
-(v)	Other external factors
+##### (v)	Other external factors
 External factors such as economic conditions and social trends are crucial in shaping purchasing decisions. Economic factors like income levels, inflation, and employment rates influence consumers' budgets and spending behaviours. Social trends, including cultural shifts, technological advances, and social media influence, impact consumer preferences and demand. By understanding and adapting to these external factors, businesses can better align their strategies with consumer needs and market conditions, ultimately enhancing their ability to attract and retain customers.
 
 
 ## AI Ethics
-Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
+The project collects user preferences, sentiments, and rating data for personalised recommendations. This data facilitates the understanding of user behaviours and generates relevant suggestions. However, some potential ethnic issues require discussion, including the following concerns: 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+#### Privacy
+It is essential to inform users about the collected data and its intended use. Users must obtain consent and have control over their data, including the option to opt-out if they choose. Additionally, it assures users of confidentiality and the secure handling of their data. This includes providing clear information about how their reviews will be used. 
+However, incomplete data implies several potential issues affecting the analysis's quality and comprehensiveness.  During the data preparation phase of our project, we spotted missing text reviews but not missing ratings. For instance, missing reviews might indicate issues with user experience, such as difficulties in submitting reviews or technical problems on the platform where reviews are posted. Or perhaps it could be due to the customer feeling uncomfortable sharing detailed feedback concerning the potential misuse of their comments or simply due to time constraints. Inevitably, it can introduce biases in the analysis if there are gaps in understanding user sentiments and feedback. 
+Another area of privacy concern is anonymizing and aggregating data to protect individual privacy by ensuring that personal identifiers are not disclosed and sensitive information is not exposed. In the case of our dataset, we differentiate and analyse customers by their Customer ID (Author_ID) instead of their full name or personal ID. 
+Most importantly, to ensure the confidentiality and security of data used for recommendations, implement stringent security measures, including advanced encryption protocols and strict access controls. Regularly update and audit these measures to safeguard user data from unauthorised access, breaches, and other threats. Employ comprehensive monitoring and incident response strategies to address any security vulnerabilities or breaches that may arise swiftly.
+
+#### Fairness
+If sentiment analysis or recommendation systems are trained on biased datasets that underrepresent certain ethnic groups, the resulting recommendations may be skewed or discriminatory. For instance, our data contains physical characteristics such as skin tone, eye colour, skin type and hair colour. These attributes should be used to enhance, not diminish, the relevance and personalization of recommendations. It is essential to ensure that data collection processes are inclusive and representative of all ethnic groups. 
+Another concern in sentiment analysis algorithms involves misinterpreting or underrepresenting sentiments expressed by different ethnic groups if the training data does not include a diverse range of linguistic and cultural contexts. Regularly testing and validating sentiment analysis models across different demographic groups helps to ensure that they accurately and fairly represent sentiments without bias.
+
+#### Accuracy
+Accuracy intersects with fairness and ethnic issues. Inaccurate or lacking diversity data can lead to biased and inaccurate outputs. For instance, if the model is trained predominantly on data from one kind of physical characteristic say skin tone, its accuracy for other groups might be compromised. We need to ensure that the data used for training and evaluation is representative of all relevant ethnic groups. High-quality, diverse datasets can improve the model’s accuracy across different demographics.
+Another issue is the modelling phase, where models might be biased if not designed to handle diverse inputs. This can result in inaccurate recommendations or sentiment analyses. For instance, the training data quality and features used to train the model can influence the accuracy. The choice of model and specific approach used to train the model can affect its performance. We should consider implementing bias mitigation techniques and fairness-aware algorithms to enhance model accuracy across different groups. This includes techniques like re-weighting, data augmentation, or using fairness constraints during training.
+
+#### Accountability
+Accountability means holding individuals or organizations responsible for the actions and impacts of algorithms and systems, especially concerning fairness, accuracy, and ethical considerations. 
+Organizations must define clear roles and responsibilities for managing and addressing ethnic biases and fairness concerns in AI systems. Assign accountability to teams or individuals responsible for monitoring, evaluating, and addressing bias and fairness issues. 
+Implement monitoring systems to assess the performance and fairness of AI systems regularly. Establish reporting mechanisms where users can report issues related to bias or inaccuracies. 
+The importance of User Empowerment is to challenge and seek redress if they believe AI systems have unfairly treated them. Provide mechanisms for users to access their data, correct inaccuracies, and appeal decisions made by AI systems. This ensures that users have a voice and that organizations are accountable for their AI decisions.
+
+#### Transparency
+Involve providing clear and accessible information about the model’s workings, including its design, data sources, training processes, and decision-making mechanisms. Also, being open about its limitations, assumptions, and potential biases in the model. 
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
