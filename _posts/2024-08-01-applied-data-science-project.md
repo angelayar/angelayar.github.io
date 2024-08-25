@@ -121,22 +121,26 @@ Step 14: We perform tokenization by dividing the text into individual units or t
 
 ![image](https://github.com/user-attachments/assets/9be490d3-961e-4b48-80b5-1e142f556c60)
 
-Finally, we transform text data into numerical features using TF-IDF capturing the importance of words within a document relative to a corpus collection. We begin by initialising the TF-IDF Vectorizer by ignoring common English stop words and limiting the number of terms to 10,000, which helps manage the dimensionality of the data. 
+Step 15: We transform text data into numerical features using TF-IDF capturing the importance of words within a document relative to a corpus collection. We begin by initialising the TF-IDF Vectorizer by ignoring common English stop words and limiting the number of terms to 10,000, which helps manage the dimensionality of the data. 
 
 ![image](https://github.com/user-attachments/assets/500295a9-ca74-4514-ab84-37868b8f1b08)
 
-Fit and Transform text data by applying the TF-IDF vectorizer to the ‘lemmatized_text’ column, converting text into TF-IDF matrix (X_tfidf). Stores the sentiment labels encoded numerically as y_tfidf, which will be used as the target variable for modelling. 
+Step 16: Fit and Transform text data by applying the TF-IDF vectorizer to the ‘lemmatized_text’ column, converting text into TF-IDF matrix (X_tfidf). Stores the sentiment labels encoded numerically as y_tfidf, which will be used as the target variable for modelling. 
 
 ![image](https://github.com/user-attachments/assets/7fa8332a-19db-46cc-8374-7448d6729321)
 
-Apply dimensionality reduction with truncated SVD to reduce the number of features from the original TF-IDF matrix to 100 components. 
+Step 17: Apply dimensionality reduction with truncated SVD to reduce the number of features from the original TF-IDF matrix to 100 components. 
 
 ![image](https://github.com/user-attachments/assets/e2d34917-30aa-4eac-9f6b-f914be0db1a3)
 
-Creates the data frame of reduced features and calculates and sorts by TF-IDF scores of terms to understand term importance. 
+Step 18: Creates the data frame of reduced features and calculates and sorts by TF-IDF scores of terms to understand term importance. 
 
+![image](https://github.com/user-attachments/assets/4c59365c-7176-426c-8805-f04b4e930f26)
 
+Step 19: Removal of rare and frequent words. We set the rare words threshold as 5 and the frequent words threshold as 100. Define and remove common words using the lambda function on ‘lemmatized_tokens’ to remove tokens that are listed in the common words. 
 
+Preview of the cleaned word cloud.
+![image](https://github.com/user-attachments/assets/f5448a68-45fd-4f6a-85a7-5c807e41461f)
 
 
 ### Modelling
