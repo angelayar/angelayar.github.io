@@ -43,7 +43,26 @@ Step 2: In the data exploration phase, we combined all reviews into one data fra
 
 Step 3: Exploring the dimensions of the Products and Reviews data frame shows that there are 8494 rows and 27 columns in the Product data frame, with the number of unique values in each feature. Similarly, we performed the same dimension checks on the Reviews data frame, which contains more than 975,000 rows and 19 columns. 
 
+![image](https://github.com/user-attachments/assets/595a5ac2-0539-47fc-8daf-f81f4e87ffa0)
+![image](https://github.com/user-attachments/assets/8217787d-ecf8-4876-b0d0-02ed47e23808)
 
+Step 4: Exploring the Descriptive statistics shows that the dataset encompasses 8,494 products, showcasing a diverse range of attributes. On average, each product has about 29,179.57 loves count, suggesting a high variance in the number of loves. Ratings are scaled between 1 to 5, with a mean of 4.19, indicating that the products generally receive favourable ratings. A mean price of $51.66 and a maximum of $1,900 indicate a significant price variation and a broad spectrum of product values. 
+
+##### Products Data Frame
+![image](https://github.com/user-attachments/assets/c4982f4f-caea-4a4f-8d9b-6a082a898a81)
+
+##### Reviews Data Frame
+![image](https://github.com/user-attachments/assets/6012d0d9-ca3e-440d-839d-8532239f4348)
+
+The review data frame features over 975,000 entries related to product feedback. The average rating is 4.29 out of 5, and approximately 83.7% of reviews are marked as recommended. Key highlights include a substantial range in feedback count, with the maximum total feedback reaching 5,464, while the average feedback count is around 4.09. Additionally, the mean price of the products is about $48.43, ranging with minimum at $3.00 and maximum $1,900, indicating a diverse pricing spectrum. 
+
+Step 5: Analysing the correlation in Product data frame revealed strong positive (>0.95) correlation between price_usd, value_price, and sale_price, indicating that higher prices tend to align closely with higher value and sales prices. Loves_cont has a moderate positive correlation with a review (0.68), suggesting that products with more reviews generally receive more “love” or positive feedback. Additionally, child_max_price and child_min_price show a moderate correlation (0.68), reflecting that products with higher maximum child prices also tend to have higher minimum child prices. 
+
+![image](https://github.com/user-attachments/assets/2e393928-57f3-4d38-94f9-436a1177e29e)
+
+Correlation analysis of the Reviews data frame shows ratings has a strong positive correlation (0.85) with is_recommended, indicating that higher-rated products are more likely to be recommended by users. There is a very high correlation between total_feedback_count and total_pos_feedback_count (0.98), suggesting that products with more total feedback tend to receive a proportional amount of positive feedback. The total_neg_feedback_count shows a moderate positive correlation with total_feedback_count (0.65), implying that as the overall number of feedback increases, the number of negative feedbacks also tends to rise. 
+
+![image](https://github.com/user-attachments/assets/a9c16928-57b6-4c43-81ce-e1b78a861c98)
 
 
 
