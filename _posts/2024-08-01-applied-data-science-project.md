@@ -273,3 +273,5 @@ Therefore, transparency is product recommendation helps ensure that the system a
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
 https://github.com/angelayar/Test
+
+Download the Sephora's dataset from Kaggle at the link [here](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews) 
