@@ -146,8 +146,22 @@ Preview of the cleaned word cloud.
 ### Modelling
 Three of the five models were chosen for sentiment level prediction and modelling. These models were accessed based on their strengths and weaknesses. Additionally, computational resources and constraints were among the factors considered.  The chosen models are Multinomial Logistic Regression (MLR), Random Forest (RF) and Naïve Bayes (NB). 
 
- ![image](https://github.com/user-attachments/assets/01f21b70-4a23-410c-97a5-a39e6a6b110e)
+---
+Types of Model: Multinomial Logistic Regression (MLR)
+Strengths:
+•	Handle multiple categories (>2 categories).
+•	Probabilistic Interpretation
+•	No assumptions of Linearity in the Dependent variable
+•	Flexibility in accommodating a range of relationships.
+•	Ease of interpretation in understanding the impact of predictors on different outcomes. 
 
+Weaknesses:
+•	Assumed categories are mutually exclusive or independent. 
+•	Complexity with a large number of categories.
+•	Overfitting risk with a large number of predictors and categories. 
+•	Requires large sample size.
+•	Multicollinearity among predictor variables can affect stability and interpretations. 
+---
 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
