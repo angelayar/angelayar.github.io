@@ -32,10 +32,14 @@ Document your work done to accomplish the outcome
 ### Data Preparation
 Step 1: Load Data
 In Jupyter Notebook, we load the Excel CSV files into pandas data frames named products and reviews. We have intentionally excluded review4 as this will be used as unseen data for evaluating the accuracy of the sentiment prediction.
+
 ![image](https://github.com/user-attachments/assets/f9c93efb-f304-4256-a299-c25a1f223847)
 
-
 Step 2: In the data exploration phase, we combined all reviews into one data frame called ‘combined_reviews’. Further checks on the data types revealed that it contains string, integers, and float. 
+
+![image](https://github.com/user-attachments/assets/276e5c99-7778-448c-9765-48382305c283)
+![image](https://github.com/user-attachments/assets/ee90b411-0f82-472e-baab-99371b3e5a77)
+
 
 Step 3: Exploring the dimensions of the Products and Reviews data frame shows that there are 8494 rows and 27 columns in the Product data frame, with the number of unique values in each feature. Similarly, we performed the same dimension checks on the Reviews data frame, which contains more than 975,000 rows and 19 columns. 
 
