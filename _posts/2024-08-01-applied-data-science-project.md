@@ -25,8 +25,6 @@ The project will use the Sephora Beauty Products dataset obtained from Kaggle, f
 - Data-Driven Business Strategy: Actionable recommendations based on sentiment analysis that can guide Sephora's product development and marketing efforts, reinforcing its position as a leader in the beauty industry.
 
 ## Work Accomplished
-Document your work done to accomplish the outcome
-
 ### Data Preparation
 Step 1: Load Data
 In Jupyter Notebook, we load the Excel CSV files into pandas data frames named products and reviews. We have intentionally excluded review4 as this will be used as unseen data for evaluating the accuracy of the sentiment prediction.
@@ -237,30 +235,39 @@ External factors such as economic conditions and social trends are crucial in sh
 
 
 ## AI Ethics
-The project collects user preferences, sentiments, and rating data for personalised recommendations. This data facilitates the understanding of user behaviours and generates relevant suggestions. However, some potential ethnic issues require discussion, including the following concerns: 
+This project collects user preferences, sentiments, and rating data for personalised recommendations. This data facilitates the understanding of user behaviours and generates relevant suggestions. However, some potential ethnic issues require discussion, including the following concerns: 
 
 ### Privacy
 It is essential to inform users about the collected data and its intended use. Users must obtain consent and have control over their data, including the option to opt-out if they choose. Additionally, it assures users of confidentiality and the secure handling of their data. This includes providing clear information about how their reviews will be used. 
+
 However, incomplete data implies several potential issues affecting the analysis's quality and comprehensiveness.  During the data preparation phase of our project, we spotted missing text reviews but not missing ratings. For instance, missing reviews might indicate issues with user experience, such as difficulties in submitting reviews or technical problems on the platform where reviews are posted. Or perhaps it could be due to the customer feeling uncomfortable sharing detailed feedback concerning the potential misuse of their comments or simply due to time constraints. Inevitably, it can introduce biases in the analysis if there are gaps in understanding user sentiments and feedback. 
+
 Another area of privacy concern is anonymizing and aggregating data to protect individual privacy by ensuring that personal identifiers are not disclosed and sensitive information is not exposed. In the case of our dataset, we differentiate and analyse customers by their Customer ID (Author_ID) instead of their full name or personal ID. 
+
 Most importantly, to ensure the confidentiality and security of data used for recommendations, implement stringent security measures, including advanced encryption protocols and strict access controls. Regularly update and audit these measures to safeguard user data from unauthorised access, breaches, and other threats. Employ comprehensive monitoring and incident response strategies to address any security vulnerabilities or breaches that may arise swiftly.
 
 ### Fairness
 If sentiment analysis or recommendation systems are trained on biased datasets that underrepresent certain ethnic groups, the resulting recommendations may be skewed or discriminatory. For instance, our data contains physical characteristics such as skin tone, eye colour, skin type and hair colour. These attributes should be used to enhance, not diminish, the relevance and personalization of recommendations. It is essential to ensure that data collection processes are inclusive and representative of all ethnic groups. 
+
 Another concern in sentiment analysis algorithms involves misinterpreting or underrepresenting sentiments expressed by different ethnic groups if the training data does not include a diverse range of linguistic and cultural contexts. Regularly testing and validating sentiment analysis models across different demographic groups helps to ensure that they accurately and fairly represent sentiments without bias.
 
 ### Accuracy
 Accuracy intersects with fairness and ethnic issues. Inaccurate or lacking diversity data can lead to biased and inaccurate outputs. For instance, if the model is trained predominantly on data from one kind of physical characteristic say skin tone, its accuracy for other groups might be compromised. We need to ensure that the data used for training and evaluation is representative of all relevant ethnic groups. High-quality, diverse datasets can improve the model’s accuracy across different demographics.
+
 Another issue is the modelling phase, where models might be biased if not designed to handle diverse inputs. This can result in inaccurate recommendations or sentiment analyses. For instance, the training data quality and features used to train the model can influence the accuracy. The choice of model and specific approach used to train the model can affect its performance. We should consider implementing bias mitigation techniques and fairness-aware algorithms to enhance model accuracy across different groups. This includes techniques like re-weighting, data augmentation, or using fairness constraints during training.
 
 ### Accountability
 Accountability means holding individuals or organizations responsible for the actions and impacts of algorithms and systems, especially concerning fairness, accuracy, and ethical considerations. 
 Organizations must define clear roles and responsibilities for managing and addressing ethnic biases and fairness concerns in AI systems. Assign accountability to teams or individuals responsible for monitoring, evaluating, and addressing bias and fairness issues. 
+
 Implement monitoring systems to assess the performance and fairness of AI systems regularly. Establish reporting mechanisms where users can report issues related to bias or inaccuracies. 
 The importance of User Empowerment is to challenge and seek redress if they believe AI systems have unfairly treated them. Provide mechanisms for users to access their data, correct inaccuracies, and appeal decisions made by AI systems. This ensures that users have a voice and that organizations are accountable for their AI decisions.
 
 ### Transparency
-Involve providing clear and accessible information about the model’s workings, including its design, data sources, training processes, and decision-making mechanisms. Also, being open about its limitations, assumptions, and potential biases in the model. 
+Provide clear and accessible information about the model’s workings, including its design, data sources, training processes, and decision-making mechanisms. Also, being open about its limitations, assumptions, and potential biases in the model help customers understand that recommendations might not always be perfectly aligned with their preferences or needs. This allows customers to understand the basis of recommendations such as in our project, the recommended products were based on its positive sentiment among users of high ratings. Additionally, transparency can mitigate risk of manipulating fake reviews or biased algorithms. 
+
+Therefore, transparency is product recommendation helps ensure that the system are fair, reliable and respectful of customers' data and preferences. 
+
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
