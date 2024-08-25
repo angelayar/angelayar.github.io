@@ -185,18 +185,56 @@ Increasing the number of iterations does not affect class precision, although ac
 
 ![image](https://github.com/user-attachments/assets/9af0d6f1-1fa8-4ff6-9f68-18ab06257268)
 
-
-
-
+The selected random forest was used to predict the sentiment level as it gave the highest accuracy of 82% among the other models. 
 
 
 ### Evaluation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+The result of the predicted sentiment level using the extracted unseen text review data from Review4 Excel CSV file clearly shows that the medium class struggles to give the correct prediction. 
+
+![image](https://github.com/user-attachments/assets/d4678b5e-f693-4f66-9b7f-213c6063a5c9)
+
+The combined ‘predicted_sentiment’ into our group by data frame ‘balanced_sentiment_data’ revealed some inaccurate sentiment prediction for the ‘medium’ level. In our business objective, the product recommendation system aims to enhance the list of recommended products to target customers based on a ‘high’ sentiment level from a similar group of customers. 
+We will try selecting two customers with dissimilarity in ratings and sentiment levels. The purpose is to counter-check if any recommended products would coincide with one another regardless of the sentiments and ratings. The outcome is true and correct, and only highly rated products by similar customers are recommended to target customers. Below is a snippet of the findings. 
+
+![image](https://github.com/user-attachments/assets/1d670c7d-cfd3-4dc0-aeeb-b3f596109fa1)
+
+![image](https://github.com/user-attachments/assets/1f03a06a-eafb-49e3-8d06-15ee733ad0df)
+
+![image](https://github.com/user-attachments/assets/6391afdf-0176-426a-b939-d3102875a61e)
+
+For example, customers 22358420165 will be recommended similar products with a high sentiment level from customers 22358420165 and so on. 
+
 
 ## Recommendation and Analysis
-Explain the analysis and recommendations
+Some suggested recommendations to improve the model include the following:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+•	Adopt class weights in the random forest as ‘balanced’ to emphasize the importance of the ‘medium’ class. This addresses class imbalance, improves model sensitivity and reduces misclassification and bias. 
+ 
+•	Apply feature engineering to explore new features or transform existing ones to capture class differences better. 
+
+•	Review data for labelling errors or inconsistencies resulting in data quality or label noise caused by inconsistency in the ‘medium’ class instances.
+
+•	Apply ensemble methods such as stacking ensemble to combine predictions of different models. 
+
+From the enhanced product recommendation system, the target customers were indeed recommended with a list of top acne products based on the sentiment scores of products rated highly by other customers similar to the target customer. 
+
+Both ratings and sentiments influence customer’s purchasing decisions. However, there are several factors to note. 
+
+(i)	#### Customer prioritising functional attributes of the products over emotional sentiment
+The focus is on the tangible and practical aspects of the product that fulfil specific needs or solve problems rather than the emotional or psychological appeal. Functional attributes of skin care products focus on tangible aspects like ingredient efficacy, compatibility with skin types, texture, packaging, and safety. Prioritizing these attributes helps ensure that the product performs effectively and meets the user's specific needs, ultimately leading to better outcomes and satisfaction.
+
+(ii)	Price can be a decisive factor
+Price is a major factor in purchasing decisions as it affects affordability, perceived value, and overall satisfaction. Consumers balance prices against their budget, perceived quality, and the value they expect to receive. Retailers and brands must consider these factors and strategically price their products to align with consumer expectations and market conditions. Understanding how price impacts decision-making helps businesses better position their products and develop effective pricing strategies to attract and retain customers
+
+(iii)	High market saturation dilutes sentiments
+High market saturation can dilute emotional sentiments by increasing competition, overwhelming consumers with choices, and leading to price-focused decisions. In such an environment, brands must adopt strategies that differentiate them from the competition, focus on unique value propositions, and engage with customers deeper to maintain emotional connections and stand out in the market.
+
+(iv)	Sentiments are subjective
+Sentiment is inherently subjective because it reflects individual emotions, perspectives, and personal experiences. This subjectivity influences how people perceive and react to products, brands, and marketing efforts. Recognising the subjective nature of sentiment is crucial for accurately interpreting feedback, tailoring marketing strategies, and understanding diverse customer perspectives. By acknowledging and addressing this subjectivity, businesses can better engage with their audience and create more effective and personalised interactions.
+
+(v)	Other external factors
+External factors such as economic conditions and social trends are crucial in shaping purchasing decisions. Economic factors like income levels, inflation, and employment rates influence consumers' budgets and spending behaviours. Social trends, including cultural shifts, technological advances, and social media influence, impact consumer preferences and demand. By understanding and adapting to these external factors, businesses can better align their strategies with consumer needs and market conditions, ultimately enhancing their ability to attract and retain customers.
+
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
